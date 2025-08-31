@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://sign-hdyupwfoq-mesrops-projects-116ab69f.vercel.app/sitemap.xml
+Sitemap: https://www.fileyourllc.online/sitemap.xml
 
 # Crawl-delay (optional)
 Crawl-delay: 1
