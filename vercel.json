@@ -6,105 +6,14 @@
       "use": "@vercel/static"
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/service/:service/:state",
-      "destination": "/service/:service/:state/index.html"
+      "src": "/service/(.*)",
+      "dest": "/service/$1/index.html"
     },
     {
-      "source": "/service/:service",
-      "destination": "/service/:service/index.html"
-    },
-    {
-      "source": "/top10-llc-services",
-      "destination": "/top10-llc-services.html"
-    },
-    {
-      "source": "/about",
-      "destination": "/about.html"
-    },
-    {
-      "source": "/contact",
-      "destination": "/contact.html"
-    },
-    {
-      "source": "/privacy-policy",
-      "destination": "/privacy-policy.html"
-    },
-    {
-      "source": "/terms-and-conditions",
-      "destination": "/terms-and-conditions.html"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/service/northwestern/:state",
-      "destination": "/service/northwestern/:state",
-      "permanent": false
-    },
-    {
-      "source": "/service/legalzoom/:state",
-      "destination": "/service/legalzoom/:state",
-      "permanent": false
-    },
-    {
-      "source": "/service/rocket-lawyer/:state",
-      "destination": "/service/rocket-lawyer/:state",
-      "permanent": false
-    },
-    {
-      "source": "/service/zenbusiness/:state",
-      "destination": "/service/zenbusiness/:state",
-      "permanent": false
-    },
-    {
-      "source": "/service/incfile/:state",
-      "destination": "/service/incfile/:state",
-      "permanent": false
-    },
-    {
-      "source": "/service/legalnature/:state",
-      "destination": "/service/legalnature/:state",
-      "permanent": false
-    },
-    {
-      "source": "/service/mycorporation/:state",
-      "destination": "/service/mycorporation/:state",
-      "permanent": false
-    },
-    {
-      "source": "/service/bizfilings/:state",
-      "destination": "/service/bizfilings/:state",
-      "permanent": false
-    },
-    {
-      "source": "/service/corpnet/:state",
-      "destination": "/service/corpnet/:state",
-      "permanent": false
-    },
-    {
-      "source": "/service/swyft-filings/:state",
-      "destination": "/service/swyft-filings/:state",
-      "permanent": false
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        }
-      ]
+      "src": "/(.*)",
+      "dest": "/$1.html"
     }
   ]
 }
